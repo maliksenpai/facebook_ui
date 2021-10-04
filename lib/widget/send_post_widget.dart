@@ -14,15 +14,49 @@ class _SendPostWidgetState extends State<SendPostWidget> {
   Widget build(BuildContext context) {
     return Card(
       elevation: 10,
-      child: Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Flexible(
               child: Row(
                 children: [
-                  CircleAvatar(
-                    child: Image.network(faker.image.loremPicsum.image(width: 100,height: 100)),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      padding: const EdgeInsets.all(8),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(50),
+                        child: Image.network(faker.image.loremPicsum.image(width: 100,height: 100)),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 9,
+                    child: Container(
+                      child: Text("Ne düşünüyorsun?",style: TextStyle(color: Colors.grey),),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: 5,
+                            color: Colors.grey,
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.image,color: Colors.grey,),
+                            Text("Fotoğraf",style: TextStyle(fontSize: 8,color: Colors.grey),maxLines: 1,)
+                          ],
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
@@ -30,7 +64,21 @@ class _SendPostWidgetState extends State<SendPostWidget> {
             Flexible(
               child: Row(
                 children: [
-                  Container(),
+                  Row(
+                    children: [
+
+                    ],
+                  ),
+                  Row(
+                    children: [
+
+                    ],
+                  ),
+                  Row(
+                    children: [
+
+                    ],
+                  )
                 ],
               ),
             )
