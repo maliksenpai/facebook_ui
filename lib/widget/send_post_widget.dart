@@ -19,7 +19,7 @@ class _SendPostWidgetState extends State<SendPostWidget> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Flexible(
+            IntrinsicHeight(
               child: Row(
                 children: [
                   Flexible(
@@ -38,16 +38,10 @@ class _SendPostWidgetState extends State<SendPostWidget> {
                       child: Text("Ne düşünüyorsun?",style: TextStyle(color: Colors.grey),),
                     ),
                   ),
-                  Flexible(
-                    flex: 1,
+                  IntrinsicHeight(
                     child: Row(
                       children: [
-                        Expanded(
-                          child: Container(
-                            width: 5,
-                            color: Colors.grey,
-                          ),
-                        ),
+                        VerticalDivider(),
                         Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
@@ -61,23 +55,38 @@ class _SendPostWidgetState extends State<SendPostWidget> {
                 ],
               ),
             ),
-            Flexible(
+            Divider(),
+            IntrinsicHeight(
               child: Row(
                 children: [
-                  Row(
-                    children: [
-
-                    ],
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.carpenter, color: Colors.indigoAccent,),
+                        Text("Yazı")
+                      ],
+                    ),
                   ),
-                  Row(
-                    children: [
-
-                    ],
+                  VerticalDivider(),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.videocam_sharp, color: Colors.red,),
+                        Text("Canlı Video")
+                      ],
+                    ),
                   ),
-                  Row(
-                    children: [
-
-                    ],
+                  VerticalDivider(),
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.location_on, color: Colors.redAccent,),
+                        Text("Konum")
+                      ],
+                    ),
                   )
                 ],
               ),
