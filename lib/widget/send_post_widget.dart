@@ -13,7 +13,7 @@ class _SendPostWidgetState extends State<SendPostWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      elevation: 0,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

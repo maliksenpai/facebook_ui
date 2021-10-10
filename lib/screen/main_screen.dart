@@ -1,5 +1,7 @@
 import 'package:facebook_ui/widget/lower_appbar_menu.dart';
+import 'package:facebook_ui/widget/post_list_widget.dart';
 import 'package:facebook_ui/widget/send_post_widget.dart';
+import 'package:facebook_ui/widget/story_list_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainScreen extends StatefulWidget {
@@ -8,6 +10,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,13 +26,13 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       body: SafeArea(
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SendPostWidget(),
-            ],
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SendPostWidget(),
+            StoryListWidget(),
+            PostListWidget()
+          ],
         ),
       ),
     );

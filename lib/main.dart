@@ -1,5 +1,6 @@
 import 'package:facebook_ui/get/initial_bindings.dart';
 import 'package:facebook_ui/screen/main_screen.dart';
+import 'package:facebook_ui/theme/light_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,7 +17,9 @@ class MyApp extends StatelessWidget {
       initialBinding: InitialBindings(),
       initialRoute: "/",
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: LightTheme.primaryColor,
+        primaryColorLight: LightTheme.primaryColor,
+        primarySwatch: MaterialColor(0xff4267B2,LightTheme.primaryMap)
       ),
       home: MainScreen(),
     );
