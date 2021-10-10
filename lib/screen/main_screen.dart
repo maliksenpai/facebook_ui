@@ -26,13 +26,16 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            SendPostWidget(),
-            StoryListWidget(),
-            PostListWidget()
-          ],
+        child: Container(
+          color: Colors.grey,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SendPostWidget(),
+              StoryListWidget(),
+              PostListWidget()
+            ],
+          ),
         ),
       ),
     );

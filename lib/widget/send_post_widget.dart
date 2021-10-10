@@ -64,6 +64,7 @@ class _SendPostWidgetState extends State<SendPostWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.carpenter, color: Colors.indigoAccent,),
+                        Container(width: 5,),
                         Text("Yazı")
                       ],
                     ),
@@ -74,6 +75,7 @@ class _SendPostWidgetState extends State<SendPostWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.videocam_sharp, color: Colors.red,),
+                        Container(width: 5,),
                         Text("Canlı Video")
                       ],
                     ),
@@ -84,6 +86,7 @@ class _SendPostWidgetState extends State<SendPostWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.location_on, color: Colors.redAccent,),
+                        Container(width: 5,),
                         Text("Konum")
                       ],
                     ),
