@@ -12,89 +12,91 @@ class _SendPostWidgetState extends State<SendPostWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            IntrinsicHeight(
-              child: Row(
-                children: [
-                  Flexible(
-                    flex: 1,
-                    child: Container(
-                      padding: const EdgeInsets.all(8),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50),
-                        child: Image.network(faker.image.loremPicsum.image(width: 100,height: 100)),
+    return Flexible(
+      child: Card(
+        elevation: 0,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IntrinsicHeight(
+                child: Row(
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: Container(
+                        padding: const EdgeInsets.all(8),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: Image.network(faker.image.loremPicsum.image(width: 100,height: 100)),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 9,
-                    child: Container(
-                      child: Text("Ne düşünüyorsun?",style: TextStyle(color: Colors.grey),),
+                    Expanded(
+                      flex: 9,
+                      child: Container(
+                        child: Text("Ne düşünüyorsun?",style: TextStyle(color: Colors.grey),),
+                      ),
                     ),
-                  ),
-                  IntrinsicHeight(
-                    child: Row(
-                      children: [
-                        VerticalDivider(),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.image,color: Colors.grey,),
-                            Text("Fotoğraf",style: TextStyle(fontSize: 8,color: Colors.grey),maxLines: 1,)
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    IntrinsicHeight(
+                      child: Row(
+                        children: [
+                          VerticalDivider(),
+                          Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.image,color: Colors.grey,),
+                              Text("Fotoğraf",style: TextStyle(fontSize: 8,color: Colors.grey),maxLines: 1,)
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Divider(),
-            IntrinsicHeight(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.carpenter, color: Colors.indigoAccent,),
-                        Container(width: 5,),
-                        Text("Yazı")
-                      ],
+              Divider(),
+              IntrinsicHeight(
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.carpenter, color: Colors.indigoAccent,),
+                          Container(width: 5,),
+                          Text("Yazı")
+                        ],
+                      ),
                     ),
-                  ),
-                  VerticalDivider(),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.videocam_sharp, color: Colors.red,),
-                        Container(width: 5,),
-                        Text("Canlı Video")
-                      ],
+                    VerticalDivider(),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.videocam_sharp, color: Colors.red,),
+                          Container(width: 5,),
+                          Text("Canlı Video")
+                        ],
+                      ),
                     ),
-                  ),
-                  VerticalDivider(),
-                  Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.location_on, color: Colors.redAccent,),
-                        Container(width: 5,),
-                        Text("Konum")
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
-          ],
+                    VerticalDivider(),
+                    Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.location_on, color: Colors.redAccent,),
+                          Container(width: 5,),
+                          Text("Konum")
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
